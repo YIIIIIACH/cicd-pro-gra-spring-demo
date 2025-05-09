@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-deploy
+  labels:
+    app:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-meter
+  template:
+    metadata:
+      labels:
+        app: spring-meter
+    spec:
+      containers:
+        - name: spring
+          image: marc.registry.harbor.com/demo/prome-graf-demo:init
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: harbor-regcred
