@@ -52,7 +52,7 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /data/cicd-demo/grafana  # 存儲位置（可以根據實際情況調整）
+    path: /data/grafana  # 存儲位置（可以根據實際情況調整）
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
