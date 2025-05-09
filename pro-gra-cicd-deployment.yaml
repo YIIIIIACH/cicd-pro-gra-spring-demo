@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: spring
-          image: marc.registry.harbor.com/demo/prome-graf-demo:init
+          image: marc.registry.harbor.com/demo/prome-graf-cicd:latest
           ports:
             - containerPort: 8080
       imagePullSecrets:
